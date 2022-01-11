@@ -10,6 +10,7 @@ pub enum LocationKind {
     Timezone,
     Airport,
     Division,
+    Person,
 }
 
 /// Represents a timezone location.
@@ -158,7 +159,11 @@ pub fn find_zone(name: &str) -> Option<ZoneRef> {
         return Some(loc);
     }
 
-    if name.len() == 3 {
+    // writeln!("{}", )
+
+    // if let Some(loc) = LOCATIONS.iter().find(|x| x.)
+
+    // if name.len() == 3 {
         if let Some(loc) = LOCATIONS
             .iter()
             .find(|x| x.aliases.iter().any(|x| x.eq_ignore_ascii_case(&name)))
@@ -166,7 +171,7 @@ pub fn find_zone(name: &str) -> Option<ZoneRef> {
         {
             return Some(loc);
         }
-    }
+    // }
 
     None
 }

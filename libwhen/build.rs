@@ -30,6 +30,7 @@ fn main() {
                 "city" => "City",
                 "airport" => "Airport",
                 "division" => "Division",
+                "person" => "Person",
                 _ => unreachable!(),
             },
             pieces[5].replace(" ", "_").replace("-", "").replace("/", "__"),
